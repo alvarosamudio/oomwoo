@@ -32,6 +32,7 @@ cloud required, no vendor lock-in.
 - 3D-printable, documented, and hackable chassis
 - Buildable from parts you source yourself
 - Apps - on top of ROS2 to customize vacuum operation
+- Stretch goal: LeRobot integration, OpenClaw
 
 ## Roadmap
 
