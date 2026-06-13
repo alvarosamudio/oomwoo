@@ -50,6 +50,9 @@ please post your raionale in [discussions](https://github.com/makerspet/oomwoo/d
 ### Assembled vacuum - back
 ![Teardown reference vacuum - back](../../assets/vacuum_model_top.webp)
 
+### Teardown reference showing the vacuum fan assembly
+![Teardown internals photo](https://github.com/remakeai/vacuum_cleaner_teardown/blob/main/assets/vacuum_top_removed.webp)
+
 ## Acceptance criteria
 
 Objective, measurable. Examples:
