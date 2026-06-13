@@ -9,7 +9,7 @@ URDF (robot definition file) - a simplified URDF with Gazebo simulation.
 
 - review the [teardown master assembly](https://github.com/remakeai/vacuum_cleaner_teardown/blob/main/step/MASTER-ASSM.stp)
   - measure the robot's outer dimensions, track distance, wheels outer diameter, wheels coordinates, LiDAR coordinates and orientation and so on
-- review the [template ROS2 package](https://github.com/makerspet/oomwoo_urdf])
+- review the [template ROS2 package](https://github.com/makerspet/oomwoo_urdf)
   - I've cloned the template package
   - this package has been tested, should be reused to minimize development
   - modify URDF to match the reference vacuum cleaner

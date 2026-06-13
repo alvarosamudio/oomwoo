@@ -5,8 +5,8 @@ yourself, and it's at a very early stage. That's the best time to get involved,
 the foundations are still being laid and your input can shape the direction.
 
 The project is built **module by module** so many people can work in parallel.
-Browse [MODULES.md](MODULES.md) for the catalog, and see
-[ARCHITECTURE.md](ARCHITECTURE.md) for how the pieces fit together.
+Browse the [module list in the README](README.md#requests-for-contributions),
+and see [ARCHITECTURE.md](ARCHITECTURE.md) for how the pieces fit together.
 
 ## Ways to help right now
 
@@ -22,11 +22,12 @@ You don't need to be a roboticist to contribute:
 
 ## Getting started
 
-1. **Pick a module.** Browse [MODULES.md](MODULES.md) and choose a hardware or
-   software module. Software and simulation modules can start immediately;
-   hardware modules wait on the interface specs in
-   [ARCHITECTURE.md](ARCHITECTURE.md). Read the module's `RFM.md` (Request for
-   Module) and the [RFM template](docs/RFM-TEMPLATE.md) so you know the contract.
+1. **Pick a module.** Browse the
+   [module list in the README](README.md#requests-for-contributions) and choose a
+   hardware or software module. Software and simulation modules can start
+   immediately; hardware modules wait on the interface specs in
+   [ARCHITECTURE.md](ARCHITECTURE.md). Read the module's `README.md` so you know
+   the contract.
 2. **Start a conversation first.** Claim or ask about the module in its
    [Issue](https://github.com/makerspet/oomwoo/issues) or
    [Discussion](https://github.com/makerspet/oomwoo/discussions) before writing
@@ -45,11 +46,11 @@ You don't need to be a roboticist to contribute:
 For CAD and mechanical work, please include source files (not just exported STLs)
 where possible, so others can modify your design. Note the tool and version you
 used. If your change affects the bill of materials, mention it in the PR. Each
-hardware module follows the [RFM template](docs/RFM-TEMPLATE.md) and must stay
-within the mechanical/electrical interfaces in [ARCHITECTURE.md](ARCHITECTURE.md).
+hardware module must stay within the mechanical/electrical interfaces in
+[ARCHITECTURE.md](ARCHITECTURE.md).
 
 **Safety:** battery, charging, motor-driver, and mains-adjacent modules require a
-maintainer safety review before merge. Include a hazard note in your RFM.
+maintainer safety review before merge. Include a hazard note in your submission.
 
 ## Code style
 

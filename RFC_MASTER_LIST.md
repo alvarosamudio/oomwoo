@@ -1,7 +1,7 @@
 # Request for Contributions
 
 The project is split into modules that can be built in parallel.
-- Each module gets a folder `contributions/module-name/` and an `RFC.md` (see [docs/RFC-TEMPLATE.md](docs/RFC-TEMPLATE.md)).
+- Each module gets a folder `contributions/module-name/` with a `README.md` describing it.
 - Contributors submit attempts under `contributions/module-name/github-username/`. 
 - Users try out contributions and the best ones surface over time.
 - The repo maintainer makes the final call which to include in the official kit(s).

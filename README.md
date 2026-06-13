@@ -65,7 +65,7 @@ source every part yourself.
 Would you like to contribute?
 
 oomwoo is organized to built by the community, massively **in parallel**.
-The vacuum and its software are subdivided into [modules/contributions](), see list below.
+The vacuum and its software are subdivided into [modules](#requests-for-contributions), see list below.
 
 A volunteer picks whatever module she wants, works on that module whenever she wants,
 submits her contribution as a PR under contibutions/module_name/github_username.
@@ -90,6 +90,7 @@ Follow us building in public:
 |---|---|---|---|
 | ROS2 URDF + Gazebo sim | [urdf-gazebo-sim](./contributions/urdf-gazebo-sim) | Ready to start work | Design URDF, TF, simulate in Gazebo |
 | Dust bin 3D design | [dust-bin](./contributions/dust-bin) | Ready to start work | Design, 3D print, test dust bin |
+| Vacuum fan / blower assembly | [vacuum-fan](./contributions/vacuum-fan) | Ready to start work | Source blower motor + impeller, design volute housing + gasket |
 
 ## Source code reference
 

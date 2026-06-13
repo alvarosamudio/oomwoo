@@ -28,8 +28,8 @@ robot application platform. Architectural boundaries (especially the app layer i
   common LiDARs, hobby motors) and FDM-printable chassis parts.
 - **Safety is reviewed, not crowd-trusted.** Battery, charging, and motor-driver
   modules pass a maintainer safety review before merge (see §8).
-- **Reference-design backed.** A known-working vacuum (see `docs/references.md`)
-  anchors the geometry and proves feasibility.
+- **Reference-design backed.** A known-working vacuum (see the references in the
+  [README](README.md)) anchors the geometry and proves feasibility.
 
 ## 3. System overview
 
@@ -59,8 +59,7 @@ robot application platform. Architectural boundaries (especially the app layer i
   y-left, z-up). All mechanical mounting points and URDF frames reference this.
 - **TBD:** Define the reference plane (floor contact), robot diameter, and height
   envelope. *These two numbers gate every hardware module.* Source these from the
-  [reference vacuum teardown](https://github.com/remakeai/vacuum-cleaner-teardown)
-  (see [docs/references.md](docs/references.md)).
+  [reference vacuum teardown](https://github.com/remakeai/vacuum-cleaner-teardown).
 - Units: millimeters, kilograms, SI. Right-handed frames. Angles in radians.
 
 ## 5. Hardware architecture
@@ -147,4 +146,4 @@ safety review before merge. RFMs for these modules must include a hazard note
 - One hardware-agnostic HAL covering reference vacuum + DIY builds (community idea)?
 - Battery chemistry and charging approach?
 - Module selection process: who decides which competing implementation wins, and
-  on what criteria? (See `docs/RFM-TEMPLATE.md` acceptance criteria.)
+  on what criteria? (See each module's acceptance criteria.)

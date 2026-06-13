@@ -62,7 +62,6 @@ Objective, measurable. Examples:
 - Easy to source, affordable
 - Performs its function
   - no air leaks
-  - easy to empty
 - Reasonable mass, size, cost budget
 - Documented and reliably reproducible by someone else
 - TBD, expect criteria to evolve
