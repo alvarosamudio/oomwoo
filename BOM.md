@@ -1,13 +1,13 @@
 # Bill of Materials (BoM)
 
-> ⚠️ **Work in progress / draft.** This is an evolving sketch, not a final BoM. The
-> **first working BoM is targeted for ~mid-July**; a final, fully-costed BoM follows as
-> the chassis, I/O board, and sensors settle and parts are sourced and validated.
-> Prices are **prototype / low-quantity** China-sourcing estimates and compress at volume.
->
-> Rationale and design decisions behind these choices live in
-> [docs/design-document.md](docs/design-document.md). Interfaces live in
-> [ARCHITECTURE.md](docs/ARCHITECTURE.md).
+> ⚠️ **Work in progress / draft.** This is an evolving sketch, not a final BoM.
+> View rationale in [docs/design-document.md](docs/design-document.md).
+
+**First working BoM** is targeted for **mid-July '26**
+
+**A final, fully-costed BoM** is targeted for **end of August '26**
+
+---
 
 ## Budget target
 
