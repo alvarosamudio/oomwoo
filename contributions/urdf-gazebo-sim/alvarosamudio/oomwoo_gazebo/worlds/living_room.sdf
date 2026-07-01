@@ -1,18 +1,35 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
   <world name="living_room">
-    <physics name="default" type="ode">
-      <gravity>0 0 -9.81</gravity>
+    <gravity>0 0 -9.81</gravity>
+
+    <physics name="1ms" type="dart">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <dart>
+        <collision_detector>bullet</collision_detector>
+      </dart>
     </physics>
 
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-cpu-lidar-system"
+      name="gz::sim::systems::CpuLidar">
+    </plugin>
     <plugin
       filename="gz-sim-contact-system"
       name="gz::sim::systems::Contact">
     </plugin>
-
     <plugin
       filename="gz-sim-user-commands-system"
       name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
     </plugin>
 
     <scene>
