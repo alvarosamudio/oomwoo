@@ -13,7 +13,7 @@ Clean well · Raspberry Pi · ROS2 · Home Assistant · 2D LiDAR · 3D printed �
 
 ## What is this?
 
-oomwoo is an **open-source home robot vacuum** you can build yourself, made for the
+OOMWOO is an **open-source home robot vacuum** you can build yourself, made for the
 Raspberry Pi, ROS2, Home Assistant, and 3D-printing communities. It uses an
 affordable 2D LiDAR to map your home and navigate on its own. Local, no
 cloud required for regular functionality, no vendor lock-in. Follow the [community newsletter](https://stats.sender.net/forms/bo2rAK/view).
@@ -71,7 +71,7 @@ source every part yourself.
 
 Would you like to contribute? See [CONTRIBUTING](docs/CONTRIBUTING.md) for the full guide.
 
-oomwoo is organized to built by the community, massively **in parallel**.
+OOMWOO is organized to built by the community, massively **in parallel**.
 The vacuum and its software are subdivided into [modules](#requests-for-contributions), see list below.
 
 A volunteer picks whatever module she wants, works on that module whenever she wants,
@@ -170,8 +170,8 @@ flowchart TD
 
 ## Source code reference
 
-- [oomwoo ROS2 and Ubuntu installation](https://github.com/makerspet/oomwoo-install/) source code
-- [oomwoo ROS2 URDF package and config](https://github.com/makerspet/oomwoo_urdf/) source code
+- [OOMWOO ROS2 and Ubuntu installation](https://github.com/makerspet/oomwoo-install/) source code
+- [OOMWOO ROS2 URDF package and config](https://github.com/makerspet/oomwoo_urdf/) source code
 - [remakeai reference vacuum teardown](https://github.com/remakeai/vacuum-cleaner-teardown) — a consumer LiDAR vacuum with a basic dock and stationary mop.
 
 ## Related prior art
@@ -212,7 +212,7 @@ single-run reviewer tests.)*
 
 ## About
 
-The project name "oomwoo" is a rotational ambigram - it reads the same flipped 180°, like the robot itself, roaming your floor in every direction.
+The project name "OOMWOO" is a rotational ambigram - it reads the same flipped 180°, like the robot itself, roaming your floor in every direction.
 
 The project is sponsored by makerspet.com and remake.ai. We are reusing their open-source solutions.
 - If you'd rather skip the parts hunt, a kit (motors, PCB, brushes, gaskets, LiDAR) will be available at [makerspet.com](https://makerspet.com), from the same maker behind this project. The kit is a convenience, never a requirement. **Everything here stays open.**
