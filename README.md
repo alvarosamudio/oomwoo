@@ -1,6 +1,6 @@
 <div align="center">
 
-# oomwoo
+# OOMWOO
 
 **The open-source robot vacuum you build yourself.**
 
