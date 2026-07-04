@@ -118,6 +118,7 @@ flowchart TD
     VF["vacuum-fan"]
     SM["source-3d-models"]
     SP["part-specs"]
+    IO["io-pcb"]
 
     URDF --> CM
     URDF --> RS
@@ -138,7 +139,7 @@ flowchart TD
     classDef blocked fill:#fff3cd,stroke:#ffc107,color:#856404;
     classDef hw fill:#cfe2ff,stroke:#0d6efd,color:#084298;
     classDef onhold fill:#e2e3e5,stroke:#6c757d,color:#383d41;
-    class URDF,SM,SP ready;
+    class URDF,SM,SP,IO ready;
     class CM,NL,DC,RS,FC,CJ blocked;
     class LR hw;
     class DB,VF onhold;
@@ -165,6 +166,7 @@ flowchart TD
 | Vacuum fan / blower assembly | [vacuum-fan](./contributions/vacuum-fan) | On hold | Fans already sourced (see BOM); volute/gasket design waits on the 3D design |
 | Source 3D models (STEP) for BOM parts | [source-3d-models](./contributions/source-3d-models) | Ready to start work | Obtain / measure / model STEP files of off-the-shelf parts (wheels, fans, caster…) so mounts fit |
 | Procure part specs & datasheets | [part-specs](./contributions/part-specs) | Ready to start work | Find/measure/reverse-engineer specs (pinouts, encoder PPR, torque, how to drive fans…) for sourced parts |
+| I/O + motor-driver PCB | [io-pcb](./contributions/io-pcb) | Ready to start work | Trim the RK3562 reference schematic to the STM32 I/O side (motors, sensors, battery charging), move the battery to 4S, convert to KiCad; hold at schematic for review |
 
 > The full granular module list lives in [docs/RFC_MASTER_LIST.md](docs/RFC_MASTER_LIST.md).
 
