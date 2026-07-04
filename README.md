@@ -92,83 +92,30 @@ Follow us building in public:
 - X: [@0OMWO0](https://x.com/@0OMWO0)
 - [Community newsletter](https://stats.sender.net/forms/bo2rAK/view).
 
-## How the RFCs fit together
-
-The modules can be worked on *in parallel*, but some build on others. An arrow
-*A → B means "B builds on A"* — green modules are ready now; amber modules are
-unblocked once their parents land; the blue one needs real hardware; grey modules are
-*on hold*. `source-3d-models` and `part-specs` are ready now; the mechanical *design*
-modules (`dust-bin`, `vacuum-fan`) are on hold pending sourced parts + a 3D
-reference-design sketch.
-
-```mermaid
-flowchart TD
-    URDF["urdf-gazebo-sim"]
-
-    CM["clean-and-map"]
-    NL["nav-localize"]
-    DC["dock-cycle"]
-    RS["recovery-safety"]
-    FC["floor-care"]
-    CJ["cleaning-jobs"]
-
-    LR["live-robot-bringup"]
-
-    DB["dust-bin"]
-    VF["vacuum-fan"]
-    SM["source-3d-models"]
-    SP["part-specs"]
-    IO["io-pcb"]
-
-    URDF --> CM
-    URDF --> RS
-    CM --> NL
-    CM --> FC
-    NL --> DC
-    CM --> CJ
-    NL --> CJ
-    DC --> CJ
-    CM --> LR
-    NL --> LR
-    DC --> LR
-    RS --> LR
-    FC --> LR
-    CJ --> LR
-
-    classDef ready fill:#d4edda,stroke:#28a745,color:#155724;
-    classDef blocked fill:#fff3cd,stroke:#ffc107,color:#856404;
-    classDef hw fill:#cfe2ff,stroke:#0d6efd,color:#084298;
-    classDef onhold fill:#e2e3e5,stroke:#6c757d,color:#383d41;
-    class URDF,SM,SP,IO ready;
-    class CM,NL,DC,RS,FC,CJ blocked;
-    class LR hw;
-    class DB,VF onhold;
-```
-
-> A standalone image of this graph (with a legend) lives at
-> [`assets/rfc-graph.png`](./assets/rfc-graph.png) for sharing on Discord, Reddit, etc.
-> The source is [`assets/rfc-graph.mmd`](./assets/rfc-graph.mmd) — edit it and re-export
-> with `npx @mermaid-js/mermaid-cli -i assets/rfc-graph.mmd -o assets/rfc-graph.png -s 3`.
-
 ## Requests for Contributions
 
-| Module | ID | Phase | Notes |
+Every module below is *actionable now* — build it against the Gazebo simulation
+([oomwoo-one](https://github.com/makerspet/oomwoo-one)) or a real *placeholder robot*
+(a [Proscenic M6 Pro connected to ROS2](https://makerspet.com/blog/tutorial-connect-robot-vacuum-cleaner-to-ros-2-proscenic-m6-pro/)),
+until OOMWOO hardware is ready. Pick one, tell us in
+[Discussions](https://github.com/makerspet/oomwoo/discussions), and open a PR.
+
+| Module | ID | Status | Notes |
 |---|---|---|---|
-| ROS2 URDF + Gazebo sim | [urdf-gazebo-sim](./contributions/urdf-gazebo-sim) | Reference: [oomwoo-one](https://github.com/makerspet/oomwoo-one); submissions welcome — [@alvarosamudio](./contributions/urdf-gazebo-sim/alvarosamudio) merged | Design URDF, TF, bumper, simulate in Gazebo |
-| First clean: coverage + mapping + exploration | [clean-and-map](./contributions/clean-and-map) | Blocked by urdf-gazebo-sim | Coverage cleaning while SLAM-mapping and exploring, in Gazebo |
-| Localization & navigation on a known map | [nav-localize](./contributions/nav-localize) | Blocked by urdf-gazebo-sim, clean-and-map | Nav2 nav, AMCL localization, relocalize when lost, resume map |
-| Dock cycle: undock, dock, recharge | [dock-cycle](./contributions/dock-cycle) | Blocked by urdf-gazebo-sim, nav-localize | Undock, return-to-dock, precise docking, station services, find dock when lost |
-| Recovery behaviors & safety | [recovery-safety](./contributions/recovery-safety) | Blocked by urdf-gazebo-sim | Recovery ladder, escalation, pause-and-alert, safety sensors, status reporting |
-| Floor-surface handling & edge cleaning | [floor-care](./contributions/floor-care) | Blocked by urdf-gazebo-sim, clean-and-map | Wall/edge following, carpet vs hardwood, mop lift/lower |
-| Cleaning modes, zones & job orchestration | [cleaning-jobs](./contributions/cleaning-jobs) | Blocked by urdf-gazebo-sim + behaviors | Modes (regular/spot), virtual walls, room segmentation, job splitting + resume |
-| Live robot bring-up & validation | [live-robot-bringup](./contributions/live-robot-bringup) | Blocked by behaviors + needs hardware | Connect real vacuum to ROS2, re-run sim tests on hardware |
-| Dust bin 3D design | [dust-bin](./contributions/dust-bin) | On hold | Design/print/test dust bin — waits on sourced parts + 3D design |
-| Vacuum fan / blower assembly | [vacuum-fan](./contributions/vacuum-fan) | On hold | Fans already sourced (see BOM); volute/gasket design waits on the 3D design |
-| Source 3D models (STEP) for BOM parts | [source-3d-models](./contributions/source-3d-models) | Ready to start work | Obtain / measure / model STEP files of off-the-shelf parts (wheels, fans, caster…) so mounts fit |
-| Procure part specs & datasheets | [part-specs](./contributions/part-specs) | Ready to start work | Find/measure/reverse-engineer specs (pinouts, encoder PPR, torque, how to drive fans…) for sourced parts |
+| ROS2 URDF + Gazebo sim | [urdf-gazebo-sim](./contributions/urdf-gazebo-sim) | In progress | Placeholder URDF + Gazebo sim (reference: [oomwoo-one](https://github.com/makerspet/oomwoo-one); [@alvarosamudio](./contributions/urdf-gazebo-sim/alvarosamudio) merged), refined when hardware lands |
+| First clean: coverage + mapping + exploration | [clean-and-map](./contributions/clean-and-map) | Ready to start work | Coverage cleaning while SLAM-mapping and exploring |
+| Localization & navigation on a known map | [nav-localize](./contributions/nav-localize) | Ready to start work | Nav2 nav, AMCL localization, relocalize when lost, resume map |
+| Dock cycle: undock, dock, recharge | [dock-cycle](./contributions/dock-cycle) | Ready to start work | Undock, return-to-dock, precise docking, station services, find dock when lost |
+| Recovery behaviors & safety | [recovery-safety](./contributions/recovery-safety) | Ready to start work | Recovery ladder, escalation, pause-and-alert, safety sensors, status reporting |
+| Floor-surface handling & edge cleaning | [floor-care](./contributions/floor-care) | Ready to start work | Wall/edge following, carpet vs hardwood, mop lift/lower |
+| Cleaning modes, zones & job orchestration | [cleaning-jobs](./contributions/cleaning-jobs) | Ready to start work | Modes (regular/spot), virtual walls, room segmentation, job splitting + resume |
+| Live robot bring-up & validation | [live-robot-bringup](./contributions/live-robot-bringup) | Ready to start work | Connect the placeholder Proscenic M6 Pro to ROS2, re-run sim tests on hardware |
+| Source 3D models (STEP) for BOM parts | [source-3d-models](./contributions/source-3d-models) | In progress | Obtain / measure / model STEP files of off-the-shelf parts (wheels, fans, caster…) so mounts fit |
+| Procure part specs & datasheets | [part-specs](./contributions/part-specs) | In progress | Find/measure/reverse-engineer specs (pinouts, encoder PPR, torque, how to drive fans…) for sourced parts |
 | I/O + motor-driver PCB | [io-pcb](./contributions/io-pcb) | Ready to start work | Trim the RK3562 reference schematic to the STM32 I/O side (motors, sensors, battery charging), move the battery to 4S, convert to KiCad; hold at schematic for review |
 
-> The full granular module list lives in [docs/RFC_MASTER_LIST.md](docs/RFC_MASTER_LIST.md).
+> Planned and on-hold modules (mechanical design, later-phase software) live in the
+> [RFC backlog](docs/RFC_BACKLOG.md).
 
 ## Source code reference
 
